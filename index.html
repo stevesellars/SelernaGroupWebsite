@@ -221,7 +221,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;transition:background .4s,ba
 nav.filled{background:rgba(7,17,31,.95);backdrop-filter:blur(20px);border-bottom:.5px solid var(--ghost)}
 .nav-inner{max-width:1300px;margin:0 auto;padding:0 52px;height:80px;display:flex;align-items:center;justify-content:space-between;transition:height .3s}
 nav.filled .nav-inner{height:64px}
-.nav-logo img{height:26px;width:auto;display:block;flex-shrink:0}
+.nav-logo img{height:26px;width:auto;display:block;flex-shrink:0;mix-blend-mode:screen}
 .nav-links{display:flex;gap:40px;list-style:none}
 .nav-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:#fff}
@@ -563,6 +563,7 @@ nav.filled .nav-inner{height:64px}
    TESTIMONIALS
 ═══════════════════════════════ */
 .testi{background:var(--rich);padding:100px 0;position:relative;overflow:hidden}
+.testi-bg-word{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-size:clamp(80px,12vw,180px);font-weight:300;letter-spacing:.12em;color:rgba(255,255,255,.03);white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
 .testi-deco-q{position:absolute;right:52px;top:-40px;font-family:var(--serif);font-size:300px;line-height:1;color:rgba(74,171,184,.05);pointer-events:none;font-weight:300}
 .testi-inner{max-width:1300px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
 .testi-label-row{border-bottom:.5px solid var(--ghost);padding-bottom:36px;margin-bottom:64px}
@@ -599,7 +600,7 @@ nav.filled .nav-inner{height:64px}
 footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 40px}
 .footer-inner{max-width:1300px;margin:0 auto;padding:0 52px}
 .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:52px;padding-bottom:60px;border-bottom:.5px solid var(--ghost)}
-.footer-logo img{height:22px;width:auto;display:block;margin-bottom:18px;max-width:140px}
+.footer-logo img{height:22px;width:auto;display:block;margin-bottom:18px;max-width:140px;mix-blend-mode:screen}
 .footer-tagline{font-size:14px;color:rgba(255,255,255,.22);line-height:1.85;max-width:260px}
 .footer-col h4{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.22);display:block;margin-bottom:20px}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:13px}
@@ -777,7 +778,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
       <div class="hero-sep"></div>
       <span class="hero-pill">AI Platform Development</span>
       <div class="hero-sep"></div>
-      <span class="hero-pill hero-pill-soft">Multiple Markets · One Operation</span>
+      <span class="hero-pill">Multiple Markets · One Operation</span>
     </div>
     <h1 class="hero-h1">Strategy. Platforms.<br><em>Actual results.</em></h1>
     <div class="hero-bottom">
