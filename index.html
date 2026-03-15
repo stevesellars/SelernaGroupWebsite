@@ -841,6 +841,11 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 .contact-success-h{font-family:var(--serif);font-size:28px;font-weight:300;color:#fff;margin-bottom:10px}
 .contact-success-p{font-size:15px;color:rgba(255,255,255,.4)}
 .contact-divider{width:1px;height:60px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.1),transparent);margin:0 auto 40px}
+
+.speaker-photo{width:100%;border-radius:4px;overflow:hidden;margin-bottom:40px;position:relative}
+.speaker-photo img{width:100%;height:320px;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(15%)}
+.speaker-photo-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(6,14,28,.6) 100%)}
+.speaker-photo-caption{position:absolute;bottom:20px;left:20px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45)}
 </style>
 </head>
 <body>
@@ -851,10 +856,9 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   <div class="nav-inner">
     <a href="#"><img src="logo-white-transparent.png" loading="lazy" alt="Selerna Group" style="height:26px;width:auto;display:block;flex-shrink:0;max-width:180px"></a>
     <ul class="nav-links">
-      <li><a href="#how">How We Work</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#platforms">Platforms</a></li>
-      <li><a href="#speaking">Speaking</a></li><li><a href="#contact">Contact</a></li><li><a href="#about">About</a></li>
+      <li><a href="#about">About</a></li>
     </ul>
     <a href="https://calendar.selernagroup.com/" class="nav-cta">Book a Discovery Call</a>
   </div>
@@ -888,9 +892,9 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   <div class="hero-stats">
     <div class="stats-row">
       <div class="stat-cell"><span class="stat-n" data-target="30" data-suffix="+">30+</span><span class="stat-l">Years building enterprise systems</span></div>
-      <div class="stat-cell"><span class="stat-n" data-target="6" data-suffix="+">6+</span><span class="stat-l">Industries actively served</span></div>
-      <div class="stat-cell"><span class="stat-n">1st</span><span class="stat-l">Of-kind technology, repeatedly</span></div>
-      <div class="stat-cell"><span class="stat-n">Founder</span><span class="stat-l">Built &amp; led a technology company</span></div>
+      <div class="stat-cell"><span class="stat-n" data-target="6" data-suffix="+">6+</span><span class="stat-l">Industries served across career</span></div>
+      <div class="stat-cell"><span class="stat-n">Zero</span><span class="stat-l">Slide decks without execution plans</span></div>
+      <div class="stat-cell"><span class="stat-n">Built</span><span class="stat-l">A technology company from zero</span></div>
     </div>
   </div>
 </section>
@@ -978,21 +982,6 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
       </div>
     </div>
     <a href="#platforms" class="track-cta track-cta-l">View Platforms →</a>
-  </div>
-</div>
-
-<!-- THE SELERNA MODEL -->
-<div class="model-intro" id="how2" style="padding-bottom:0">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1300px;margin:0 auto;padding:0 52px 80px">
-    <div class="reveal">
-      <span class="model-eyebrow">The Selerna Model</span>
-      <h2 class="model-h">Consulting finds the problem.<br><em>Platforms own the solution.</em></h2>
-      <p class="model-sub">A self-reinforcing engine. Every engagement makes the next platform smarter. Every platform validates the next engagement. The loop compounds.</p>
-    </div>
-    <!-- ANIMATED FLYWHEEL DIAGRAM -->
-    <div class="reveal d1" style="position:relative;display:flex;align-items:center;justify-content:center;padding:40px 0;min-height:520px">
-      <canvas id="orbitCanvas" style="width:100%;max-width:520px;height:520px;display:block;flex-shrink:0"></canvas>
-    </div>
   </div>
 </div>
 
@@ -1213,45 +1202,6 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
     </div>
   </div>
 </section>
-<!-- WHO WE SERVE / INDUSTRY OUTCOMES -->
-<section class="outcomes">
-  <div class="outcomes-inner">
-    <div class="outcomes-head reveal">
-      <span class="section-tag" style="display:inline-block;margin-bottom:16px">Industries We Serve</span>
-      <h2>What does Selerna<br><em>deliver for your industry?</em></h2>
-      <p>Executive AI leadership and operational platforms built for the specific challenges of your market.</p>
-    </div>
-    <div class="outcomes-grid">
-      <div class="oc reveal">
-        <div class="oc-stripe oc-s1"></div>
-        <span class="oc-industry">Cruise &amp; Excursions</span>
-        <div class="oc-result">Operational Intelligence for Excursion Operators</div>
-        <p class="oc-desc">Fragmented inventory, manual pricing, and disconnected data — replaced by a single AI-powered platform built for how cruise excursion operators actually run their business.</p>
-      </div>
-      <div class="oc reveal d1">
-        <div class="oc-stripe oc-s2"></div>
-        <span class="oc-industry">Managed Service Providers</span>
-        <div class="oc-result">AI-Powered MSP Operations Platform</div>
-        <p class="oc-desc">Client intelligence dashboards, service workflow automation, and AI operational assistants — turning reactive MSPs into proactive, scalable service engines.</p>
-      </div>
-      <div class="oc reveal d2">
-        <div class="oc-stripe oc-s3"></div>
-        <span class="oc-industry">CPA &amp; Accounting Firms</span>
-        <div class="oc-result">AI Practice Management for Accounting</div>
-        <p class="oc-desc">Automate the operational layer of a CPA practice — client workflows, scheduling, reporting, and intelligence — so partners focus on what generates revenue.</p>
-      </div>
-      <div class="oc reveal d3">
-        <div class="oc-stripe oc-s4"></div>
-        <span class="oc-industry">Growth-Stage Companies</span>
-        <div class="oc-result">From AI Confusion to Execution in Weeks</div>
-        <p class="oc-desc">Fractional CTO and CAIO leadership, a clear AI roadmap, and a leadership team aligned on how to move — without the cost of full-time executive hires.</p>
-      </div>
-    </div>
-    <p class="outcomes-note">Operating across cruise, maritime, telecom, healthcare, financial services, professional services, and more.</p>
-  </div>
-</section>
-
-
 <!-- WHERE AI MOVES THE NEEDLE -->
 <section class="needle">
   <div class="needle-inner">
@@ -1476,6 +1426,11 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
       </div>
     </div>
     <div class="speaker-right reveal d1">
+      <div class="speaker-photo">
+        <img src="speaking.jpg" alt="Steve Sellars — Founder, Selerna Group" loading="lazy" style="object-position:center top">
+        <div class="speaker-photo-overlay"></div>
+        
+      </div>
       <span class="speaker-format-label">Session Formats</span>
       <div class="speaker-format">
         <div class="speaker-format-item">
@@ -1496,8 +1451,8 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
         </div>
       </div>
       <div class="speaker-quote reveal d2">
-        <p class="speaker-quote-text">"Steve doesn't just speak about AI — he reads the room, reads the moment, and gives you something you can actually use on Monday morning."</p>
-        <span class="speaker-quote-attr">Senior Executive · Global Operations</span>
+        <p class="speaker-quote-text">Every session is built for the specific audience in the room — the industry, the stakes, the moment. Not a packaged keynote. A live read of where AI actually stands and what it means for your business, right now.</p>
+        <span class="speaker-quote-attr" style="color:rgba(74,171,184,.6);letter-spacing:.1em">— Steve Sellars, Selerna Group</span>
       </div>
     </div>
   </div>
@@ -1508,33 +1463,34 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   <div class="testi-bg-word">TESTIMONIALS</div>
   <div class="testi-inner">
     <div class="testi-head reveal">
-      <span class="testi-eyebrow">Testimonials</span>
+      <span class="testi-eyebrow">Client Feedback</span>
       <h2 class="testi-title">What our clients say<br><em>about working with Selerna.</em></h2>
+      <p style="font-size:13px;color:rgba(255,255,255,.22);font-style:italic;margin-top:16px">Names withheld at client request.</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card reveal">
         <span class="testi-quote-mark">❝</span>
         <div class="testi-card-title">If You're Serious About AI, Start Here</div>
         <p class="testi-q">I came in expecting tools — I left with a strategic lens for transformation. Steve delivers frameworks, use cases, and strategic thinking that move the needle. One session, major pivot.</p>
-        <cite class="testi-cite">C-Suite Client · Enterprise AI Strategy</cite>
+        
       </div>
       <div class="testi-card reveal d1">
         <span class="testi-quote-mark">❝</span>
         <div class="testi-card-title">Clarity Over Hype — AI You Can Execute On</div>
         <p class="testi-q">Steve cuts through the noise. Real-world clarity and a path to execution — not just the slide deck. If you're leading teams and need to make AI work for the business, Steve should be in your corner.</p>
-        <cite class="testi-cite">Senior Executive · Operations Leadership</cite>
+        
       </div>
       <div class="testi-card reveal d2">
         <span class="testi-quote-mark">❝</span>
         <div class="testi-card-title">From Curiosity to Competitive Advantage</div>
         <p class="testi-q">My consultation completely changed how I think about AI in the enterprise. I came in expecting tools — I left rethinking priorities and reframing our entire approach. His clarity and insight led to a major strategic pivot.</p>
-        <cite class="testi-cite">Founder · Growth-Stage Technology Company</cite>
+        
       </div>
       <div class="testi-card reveal d3">
         <span class="testi-quote-mark">❝</span>
         <div class="testi-card-title">Executive-Level Trust, Strategic Outcomes</div>
         <p class="testi-q">I connected Steve with a global executive exploring AI innovation. His blend of deep expertise and business-first thinking immediately stood out. That introduction turned into a strategic partnership — Steve is now guiding their full AI roadmap. The impact was immediate and measurable.</p>
-        <cite class="testi-cite">Global Executive · Strategic Partnership</cite>
+        
       </div>
     </div>
   </div>
