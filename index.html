@@ -1203,6 +1203,24 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 .assessment-cta:hover{background:var(--accent2);transform:translateY(-2px)}
 @media(max-width:1080px){.assessment-inner{grid-template-columns:1fr;gap:36px}}
 @media(max-width:768px){.assessment-inner{padding:0 20px}.assessment-h{font-size:clamp(24px,7vw,34px)}}
+
+/* ── Hamburger menu ── */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;z-index:1001;background:none;border:none}
+.nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,15,28,.97);z-index:1000;flex-direction:column;align-items:center;justify-content:center;gap:0}
+.nav-mobile-menu.open{display:flex}
+.nav-mobile-link{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7);text-decoration:none;padding:20px 40px;transition:color .2s;width:100%;text-align:center;border-bottom:.5px solid rgba(255,255,255,.06)}
+.nav-mobile-link:first-child{border-top:.5px solid rgba(255,255,255,.06)}
+.nav-mobile-link:hover{color:var(--accent)}
+.nav-mobile-cta{margin-top:32px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:16px 44px;border-radius:3px;background:var(--accent);color:#fff;text-decoration:none}
+.nav-mobile-close{position:absolute;top:28px;right:24px;font-size:24px;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;line-height:1}
+@media(max-width:768px){
+  .nav-hamburger{display:flex}
+  .nav-cta{display:none}
+}
 </style>
 </head>
 <body>
@@ -1218,8 +1236,21 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
       <li><a href="#about">About</a></li>
     </ul>
     <a href="https://calendar.selernagroup.com/" class="nav-cta">Book a Discovery Call</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <button class="nav-mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <a href="#services" class="nav-mobile-link" onclick="toggleMobileMenu()">Services</a>
+  <a href="#platforms" class="nav-mobile-link" onclick="toggleMobileMenu()">Platforms</a>
+  <a href="#about" class="nav-mobile-link" onclick="toggleMobileMenu()">About</a>
+  <a href="#contact" class="nav-mobile-link" onclick="toggleMobileMenu()">Contact</a>
+  <a href="https://calendar.selernagroup.com/" class="nav-mobile-cta">Book a Discovery Call</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1984,7 +2015,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
         <p class="footer-tagline">Fractional CTO · CAIO · AI Platform Development. Strategy, leadership, and vertical platforms — from one integrated operation across multiple markets.</p>
       </div>
       <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="#">Fractional CTO / CAIO</a></li><li><a href="#">Chief Transformation Architect™</a></li><li><a href="#">AI Strategy Blueprint™</a></li><li><a href="#">Assessments &amp; Roadmaps</a></li><li><a href="#">Executive Workshops</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="#">About Selerna</a></li><li><a href="#">Platform Studio</a></li><li><a href="#">Insights</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="#">About Selerna</a></li><li><a href="#">Platform Studio</a></li><li><a href="#">Insights</a></li><li><a href="#contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul class="footer-links"><li><a href="tel:4079559455">407-955-9455</a></li><li><a href="mailto:contact@selernagroup.com">contact@selernagroup.com</a></li></ul><div class="footer-social" style="margin-top:24px"><a href="https://www.linkedin.com/in/stevesellars0415/">LinkedIn</a><a href="https://x.com/selernagroup">X</a><a href="https://www.instagram.com/selernagroup">Instagram</a></div></div>
     </div>
     <div class="footer-bottom"><span class="footer-copy">© 2025 Selerna Group. All Rights Reserved.</span><div class="footer-legal"><a href="https://selernagroup.com/privacy-policy/">Privacy</a><a href="https://selernagroup.com/terms-and-conditions/">Terms</a></div></div>
@@ -2575,6 +2606,16 @@ window.switchTrackMob = function(idx) {
     });
   });
 })();
+</script>
+
+<script>
+function toggleMobileMenu(){
+  var btn = document.getElementById('navHamburger');
+  var menu = document.getElementById('navMobileMenu');
+  btn.classList.toggle('open');
+  menu.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
 </script>
 </body>
 </html>
