@@ -450,8 +450,8 @@ nav.filled .nav-inner{height:64px}
 .svc-band:hover{border-top-color:rgba(139,111,212,.3)}
 .svc-band:nth-child(odd){background:rgba(15,32,53,.6)}
 .svc-band:nth-child(even){background:rgba(11,25,41,.8)}
-.svc-band-left{padding:52px 48px 52px clamp(28px,calc(50vw - 598px),120px);position:relative;z-index:2;max-width:700px}
-.svc-band-bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,#8B6FD4,transparent);opacity:.8}
+.svc-band-left{padding:52px 48px 52px max(52px,calc((100vw - 1300px)/2 + 52px));position:relative;z-index:2}
+.svc-band-bar{position:absolute;left:max(0px,calc((100vw - 1300px)/2));top:0;bottom:0;width:4px;background:linear-gradient(to bottom,#8B6FD4,transparent);opacity:.8}
 .svc-band:hover .svc-band-bar{opacity:1}
 .svc-band-num{font-family:var(--serif);font-size:120px;font-weight:300;line-height:1;color:rgba(255,255,255,.04);position:absolute;bottom:-20px;right:24px;pointer-events:none;user-select:none;transition:color .4s}
 .svc-band:hover .svc-band-num{color:rgba(139,111,212,.07)}
@@ -461,8 +461,8 @@ nav.filled .nav-inner{height:64px}
 .svc-band:hover .svc-band-flip{color:rgba(139,111,212,.5)}
 .svc-band-flip::before{content:"→";font-size:12px;transition:transform .3s}
 .svc-band:hover .svc-band-flip::before{transform:translateX(4px)}
-.svc-band-right{padding:52px clamp(28px,calc(50vw - 598px),100px) 52px 48px;position:relative;z-index:2;display:flex;align-items:center}
-.svc-band-body{font-size:16px;line-height:1.85;color:rgba(255,255,255,.38);transition:color .3s;max-width:520px}
+.svc-band-right{padding:52px max(52px,calc((100vw - 1300px)/2 + 52px)) 52px 48px;position:relative;z-index:2;display:flex;align-items:center}
+.svc-band-body{font-size:16px;line-height:1.85;color:rgba(255,255,255,.38);transition:color .3s;max-width:480px}
 .svc-band:hover .svc-band-body{color:rgba(255,255,255,.5)}
 /* Hover slide-in back panel */
 .svc-band-back{position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(135deg,#0E1E36 0%,#12284A 60%,#0D1E38 100%);transform:translateX(100%);transition:transform .5s cubic-bezier(.4,0,.2,1);z-index:4;padding:44px 52px;display:flex;flex-direction:column;justify-content:center;gap:14px;border-left:.5px solid rgba(139,111,212,.2)}
@@ -1129,7 +1129,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 <!-- PLATFORMS -->
 <section class="platforms" id="platforms">
   <div class="plat-bg"></div>
-  <canvas id="platCanvas"></canvas>
+  <canvas id="platCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.7"></canvas>
   <div class="plat-orb"></div>
   <div class="plat-orb2"></div>
   <div class="plat-inner">
@@ -1272,7 +1272,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 
 <!-- CTA -->
 <section class="cta">
-  <canvas id="ctaCanvas"></canvas>
+  <canvas id="ctaCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1"></canvas>
   <div class="cta-veil"></div>
   <div class="cta-body reveal">
     <h2 class="cta-h">Lead the change.<br>Build what's next.</h2>
@@ -1409,6 +1409,12 @@ if(platCanvas) {
     pc.clearRect(0, 0, W, H);
     pt += 0.008;
     
+    // Clip everything to canvas bounds — no overflow into next section
+    pc.save();
+    pc.beginPath();
+    pc.rect(0, 0, W, H);
+    pc.clip();
+    
     // Hexagon grid
     const cols = Math.ceil(W / (hexSize * 1.75)) + 2;
     const rows = Math.ceil(H / (hexSize * 1.52)) + 2;
@@ -1437,25 +1443,38 @@ if(platCanvas) {
         pc.lineWidth = 0.6;
         pc.stroke();
         
-        // Occasional filled hex for energy
+        // Occasional filled hex — very subtle
         if((col * 7 + row * 3) % 23 === 0) {
           const fillPulse = Math.sin(dist * 0.02 - pt * 3 + col) * 0.5 + 0.5;
-          pc.fillStyle = `rgba(74,171,184,${fillPulse * 0.06})`;
+          pc.fillStyle = `rgba(74,171,184,${fillPulse * 0.025})`;
           pc.fill();
         }
       }
     }
     
-    // Floating data particles
+    // Shooting star particles — restored brightness
     for(let i = 0; i < 25; i++) {
       const px = (W * 0.3) + Math.sin(pt * 0.7 + i * 2.4) * W * 0.35;
       const py = (H * 0.3) + Math.cos(pt * 0.5 + i * 1.8) * H * 0.35;
-      const a = Math.sin(pt + i) * 0.3 + 0.4;
-      pc.beginPath(); pc.arc(px, py, 1.5, 0, Math.PI * 2);
+      const a = Math.sin(pt + i) * 0.35 + 0.45;
+      const size = i % 5 === 0 ? 2.5 : 1.5;
+      pc.beginPath(); pc.arc(px, py, size, 0, Math.PI * 2);
       pc.fillStyle = i % 4 === 0 ? `rgba(139,111,212,${a})` : `rgba(74,171,184,${a})`;
       pc.fill();
+      // Trail for brightest particles
+      if(i % 5 === 0) {
+        const trailX = px - Math.sin(pt * 0.7 + i * 2.4) * 12;
+        const trailY = py - Math.cos(pt * 0.5 + i * 1.8) * 12;
+        pc.beginPath();
+        pc.moveTo(px, py);
+        pc.lineTo(trailX, trailY);
+        pc.strokeStyle = i % 4 === 0 ? `rgba(139,111,212,${a * 0.4})` : `rgba(74,171,184,${a * 0.4})`;
+        pc.lineWidth = 1;
+        pc.stroke();
+      }
     }
     
+    pc.restore();
     requestAnimationFrame(drawHexGrid);
   }
   drawHexGrid();
