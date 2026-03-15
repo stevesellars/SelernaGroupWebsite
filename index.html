@@ -568,10 +568,12 @@ nav.filled .nav-inner{height:64px}
 .testi-inner{max-width:1300px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
 .testi-label-row{border-bottom:.5px solid var(--ghost);padding-bottom:36px;margin-bottom:64px}
 .testi-label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.22)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.testi-card{padding-right:60px;border-right:.5px solid var(--ghost)}
-.testi-card:last-child{border-right:none;padding-right:0;padding-left:60px}
-.testi-card:nth-child(2){padding:0 60px}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.testi-card{padding:52px 60px 52px 0;border-right:.5px solid var(--ghost);border-bottom:.5px solid var(--ghost)}
+.testi-card:last-child{border-right:none;border-bottom:none}
+.testi-card:nth-child(2){padding:52px 60px;border-bottom:.5px solid var(--ghost)}
+.testi-card:nth-child(3){padding:52px 60px 52px 0;border-right:.5px solid var(--ghost);border-bottom:none}
+.testi-card:nth-child(4){padding:52px 0 52px 60px;border-right:none;border-bottom:none}
 .testi-q{font-family:var(--serif);font-size:22px;font-weight:300;font-style:italic;line-height:1.65;color:rgba(255,255,255,.58);margin-bottom:24px}
 .testi-cite{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.22)}
 
