@@ -745,6 +745,37 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
     .outcomes-inner{padding-left:28px;padding-right:28px}
   }
 
+
+/* ═══════════════════════════════
+   EXECUTIVE SPEAKER
+═══════════════════════════════ */
+.speaker{background:linear-gradient(160deg,#060E1C 0%,#0B1929 40%,#0D2040 100%);padding:120px 0;position:relative;overflow:hidden}
+.speaker::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 50%,rgba(139,111,212,.07) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 0% 80%,rgba(74,171,184,.05) 0%,transparent 50%);pointer-events:none}
+.speaker-inner{max-width:1300px;margin:0 auto;padding:0 52px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;position:relative;z-index:2}
+.speaker-eyebrow{font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(139,111,212,.8);display:block;margin-bottom:24px}
+.speaker-h{font-family:var(--serif);font-size:clamp(44px,5vw,68px);font-weight:300;color:#fff;line-height:.95;letter-spacing:-.02em;margin-bottom:28px}
+.speaker-h em{font-style:italic;color:rgba(255,255,255,.42)}
+.speaker-p{font-size:16px;line-height:1.8;color:rgba(255,255,255,.42);margin-bottom:20px;max-width:480px}
+.speaker-p strong{color:rgba(255,255,255,.75);font-weight:500}
+.speaker-divider{width:48px;height:1px;background:linear-gradient(to right,#8B6FD4,transparent);margin:36px 0}
+.speaker-cred{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(74,171,184,.6);margin-bottom:8px}
+.speaker-cred-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.speaker-cred-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;border:.5px solid rgba(74,171,184,.25);color:rgba(74,171,184,.6)}
+.speaker-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:8px}
+.speaker-cta{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:16px 40px;border-radius:2px;background:var(--accent);color:#fff;text-decoration:none;transition:background .2s,transform .2s;box-shadow:0 6px 28px rgba(74,171,184,.3)}
+.speaker-cta:hover{background:var(--accent2);transform:translateY(-2px)}
+.speaker-cta-alt{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.speaker-cta-alt:hover{color:rgba(255,255,255,.65)}
+.speaker-right{padding-top:8px}
+.speaker-format-label{font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(139,111,212,.7);display:block;margin-bottom:28px}
+.speaker-format{display:flex;flex-direction:column;gap:0;border-top:.5px solid rgba(255,255,255,.07)}
+.speaker-format-item{padding:24px 0;border-bottom:.5px solid rgba(255,255,255,.07);display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:start;transition:all .25s;cursor:default}
+.speaker-format-item:hover .speaker-fi-name{color:var(--accent)}
+.speaker-fi-name{font-family:var(--serif);font-size:20px;font-weight:300;color:rgba(255,255,255,.85);line-height:1.2}
+.speaker-fi-desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,.35)}
+.speaker-quote{margin-top:52px;padding:36px 40px;background:rgba(255,255,255,.03);border:.5px solid rgba(139,111,212,.2);border-left:3px solid #8B6FD4;border-radius:2px}
+.speaker-quote-text{font-family:var(--serif);font-size:20px;font-weight:300;font-style:italic;color:rgba(255,255,255,.65);line-height:1.5;margin-bottom:16px}
+.speaker-quote-attr{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(139,111,212,.6)}
 </style>
 </head>
 <body>
@@ -758,7 +789,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
       <li><a href="#how">How We Work</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#platforms">Platforms</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#speaking">Speaking</a></li><li><a href="#about">About</a></li>
     </ul>
     <a href="https://calendar.selernagroup.com/" class="nav-cta">Book a Discovery Call</a>
   </div>
@@ -1076,6 +1107,34 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
         </div>
       </div>
 
+
+      <!-- Band 05 -->
+      <div class="svc-band reveal d4">
+        <div class="svc-band-left">
+          <div class="svc-band-bar"></div>
+          <div class="svc-band-num">05</div>
+          <div>
+            <span class="svc-band-tag">AI Implementation</span>
+            <div class="svc-band-name">Agents · Workflows · Integrations</div>
+          </div>
+          <div class="svc-tags" style="position:relative;z-index:1;margin-top:24px">
+            <span class="svc-tag">AI Agents</span>
+            <span class="svc-tag">Workflow Automation</span>
+            <span class="svc-tag">System Integration</span>
+          </div>
+          <div class="svc-band-flip">Hover to learn more</div>
+        </div>
+        <div class="svc-band-right">
+          <p class="svc-band-body">The strategy is only as good as what gets built. Selerna moves from roadmap to running — designing and deploying AI agents, automated workflows, and system integrations that replace manual processes with intelligent operations built for how your business actually works.</p>
+        </div>
+        <div class="svc-band-back">
+          <span class="svc-band-back-tag">What gets built</span>
+          <div class="svc-band-back-h">AI that runs in production — not a proof of concept that lives in a slide deck.</div>
+          <p class="svc-band-back-p">Autonomous agents. Cross-system workflow automation. LLM integration into existing operations. Data pipeline design. Built to your stack, your team, and your operational reality.</p>
+          <a href="https://calendar.selernagroup.com/" class="svc-band-back-cta">Discuss Your Build →</a>
+        </div>
+      </div>
+
       <!-- CTA row -->
       <div class="svc-cta-row reveal">
         <div class="svc-cta-inner">
@@ -1233,6 +1292,58 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
     </div>
   </div>
 </div>
+
+
+<!-- EXECUTIVE SPEAKER -->
+<section class="speaker" id="speaking">
+  <div class="speaker-inner">
+    <div class="speaker-left reveal">
+      <span class="speaker-eyebrow">Executive Speaker</span>
+      <h2 class="speaker-h">The room changes.<br><em>The message stays ahead.</em></h2>
+      <p class="speaker-p">AI is moving faster than any fixed keynote can track. Steve doesn't deliver a deck — he delivers a <strong>live read of where things actually stand</strong>, built for the specific audience in front of him and calibrated to what's happening right now.</p>
+      <p class="speaker-p">From boardrooms to investor briefings to industry conferences — the sessions are custom-designed, executive-to-executive, and built around one goal: leaving the room with clarity and a reason to move.</p>
+      <div class="speaker-divider"></div>
+      <span class="speaker-cred">Delivered across</span>
+      <div class="speaker-cred-list">
+        <span class="speaker-cred-tag">C-Suite Teams</span>
+        <span class="speaker-cred-tag">Boards of Directors</span>
+        <span class="speaker-cred-tag">Investor Groups</span>
+        <span class="speaker-cred-tag">Industry Conferences</span>
+        <span class="speaker-cred-tag">Executive Retreats</span>
+        <span class="speaker-cred-tag">Private Roundtables</span>
+      </div>
+      <div class="speaker-cta-row">
+        <a href="https://calendar.selernagroup.com/" class="speaker-cta">Book a Speaking Engagement →</a>
+        <a href="#services" class="speaker-cta-alt">View Workshops &amp; Briefings →</a>
+      </div>
+    </div>
+    <div class="speaker-right reveal d1">
+      <span class="speaker-format-label">Session Formats</span>
+      <div class="speaker-format">
+        <div class="speaker-format-item">
+          <div class="speaker-fi-name">Keynote</div>
+          <div class="speaker-fi-desc">Conference and event keynotes for technology, industry, and executive audiences. Built fresh for each engagement — no recycled narratives.</div>
+        </div>
+        <div class="speaker-format-item">
+          <div class="speaker-fi-name">Boardroom Briefing</div>
+          <div class="speaker-fi-desc">Private, structured sessions for boards and executive committees navigating AI decisions. Confidential, direct, and built around your specific context.</div>
+        </div>
+        <div class="speaker-format-item">
+          <div class="speaker-fi-name">Investor Briefing</div>
+          <div class="speaker-fi-desc">Clear-eyed AI landscape briefings for investment groups and family offices. Signal vs noise — with a 30-year operator's perspective on what actually compounds.</div>
+        </div>
+        <div class="speaker-format-item">
+          <div class="speaker-fi-name">Executive Workshop</div>
+          <div class="speaker-fi-desc">Half-day or full-day working sessions that move leadership from AI curiosity to aligned strategy. Interactive, facilitated, and outcome-driven.</div>
+        </div>
+      </div>
+      <div class="speaker-quote reveal d2">
+        <p class="speaker-quote-text">"Steve doesn't just speak about AI — he reads the room, reads the moment, and gives you something you can actually use on Monday morning."</p>
+        <span class="speaker-quote-attr">Senior Executive · Global Operations</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- TESTIMONIALS -->
 <section class="testi">
