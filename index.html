@@ -383,7 +383,7 @@ nav.filled .nav-inner{height:64px}
 /* ═══════════════════════════════
    MODEL SECTION
 ═══════════════════════════════ */
-.model-intro{background:var(--light);padding:96px 0 80px;background-image:radial-gradient(circle,rgba(74,171,184,.07) 1px,transparent 1px);background-size:34px 34px}
+.model-intro{background:var(--light);padding:72px 0 60px;background-image:radial-gradient(circle,rgba(74,171,184,.07) 1px,transparent 1px);background-size:34px 34px}
 .model-intro-inner{max-width:1300px;margin:0 auto;padding:0 52px}
 .model-eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:20px}
 .model-h{font-family:var(--serif);font-size:clamp(44px,5vw,72px);font-weight:300;line-height:1.05;letter-spacing:-.02em;color:var(--navy);margin-bottom:20px}
@@ -439,11 +439,11 @@ nav.filled .nav-inner{height:64px}
 .services{background:#0B1929;padding:0;position:relative;overflow:hidden}
 .services::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(74,171,184,.03) 0px,rgba(74,171,184,.03) 1px,transparent 1px,transparent 80px),repeating-linear-gradient(90deg,rgba(74,171,184,.03) 0px,rgba(74,171,184,.03) 1px,transparent 1px,transparent 80px);pointer-events:none;z-index:0}
 .svc-inner{max-width:100%;margin:0;padding:0;position:relative;z-index:2}
-.svc-head{max-width:1300px;margin:0 auto;padding:80px 52px 56px;position:relative;z-index:2}
-.svc-head-top{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:end}
+.svc-head{max-width:1300px;margin:0 auto;padding:64px 52px 48px;position:relative;z-index:2}
+.svc-head-top{display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
 .svc-h{font-family:var(--serif);font-size:clamp(48px,5.5vw,78px);font-weight:300;line-height:.95;letter-spacing:-.03em;color:#fff}
 .svc-h em{font-style:italic;color:rgba(255,255,255,.42)}
-.svc-intro-text{font-size:16px;line-height:1.8;color:rgba(255,255,255,.36);padding-bottom:8px}
+.svc-intro-text{font-size:16px;line-height:1.8;color:rgba(255,255,255,.36);max-width:700px;text-align:center}
 /* Band layout */
 .svc-cards{display:flex;flex-direction:column}
 .svc-band{display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;min-height:180px;cursor:pointer;border-top:.5px solid rgba(255,255,255,.06);transition:border-color .3s}
@@ -492,7 +492,7 @@ nav.filled .nav-inner{height:64px}
 /* ═══════════════════════════════
    WHO WE SERVE
 ═══════════════════════════════ */
-.who{background:var(--light);padding:100px 0;background-image:radial-gradient(circle,rgba(74,171,184,.06) 1px,transparent 1px);background-size:34px 34px}
+.who{background:var(--light);padding:72px 0;background-image:radial-gradient(circle,rgba(74,171,184,.06) 1px,transparent 1px);background-size:34px 34px}
 .who-inner{max-width:1300px;margin:0 auto;padding:0 52px}
 .who-head{margin-bottom:60px}
 .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -512,17 +512,17 @@ nav.filled .nav-inner{height:64px}
 /* ═══════════════════════════════
    PLATFORMS
 ═══════════════════════════════ */
-.platforms{background:var(--navy);padding:100px 0;position:relative;overflow:hidden}
+.platforms{background:var(--navy);padding:72px 0;position:relative;overflow:hidden}
 .plat-bg{position:absolute;inset:0;background:url('platform-bg.jpg') center/cover no-repeat;opacity:.08}
 .plat-mesh{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(74,171,184,.025) 0px,rgba(74,171,184,.025) 1px,transparent 1px,transparent 44px),repeating-linear-gradient(-45deg,rgba(74,171,184,.025) 0px,rgba(74,171,184,.025) 1px,transparent 1px,transparent 44px)}
 .plat-orb{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(74,171,184,.07) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none}
-.plat-inner{max-width:1300px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
-.plat-head{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;padding-bottom:60px;border-bottom:.5px solid var(--ghost);position:relative}
-.plat-h{font-family:var(--serif);font-size:clamp(44px,4.5vw,66px);font-weight:300;color:#fff;line-height:1.05;letter-spacing:-.02em}
+.plat-inner{max-width:1300px;margin:0 auto;padding:80px 52px 0;position:relative;z-index:2}
+.plat-head{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:64px;border-bottom:.5px solid var(--ghost);position:relative;gap:32px}
+.plat-h{font-family:var(--serif);font-size:clamp(36px,3.5vw,52px);font-weight:300;color:#fff;line-height:1.1;letter-spacing:-.02em}
 .plat-h em{font-style:italic}
-.plat-sub{font-size:16px;line-height:1.8;color:rgba(255,255,255,.38)}
+.plat-sub{font-size:16px;line-height:1.8;color:rgba(255,255,255,.38);max-width:700px;text-align:center}
 .plat-sub strong{color:rgba(255,255,255,.75);font-weight:600}
-.plat-row{display:grid;grid-template-columns:60px 1fr 1.2fr;gap:0;padding:48px 0;border-bottom:.5px solid var(--ghost);position:relative;cursor:default}
+.plat-row{display:grid;grid-template-columns:60px 1fr 1.2fr;gap:0;padding:36px 0;border-bottom:.5px solid var(--ghost);position:relative;cursor:default}
 .plat-row-bg{position:absolute;inset:0 -52px;background:rgba(255,255,255,.03);opacity:0;transition:opacity .25s;pointer-events:none}
 .plat-row:hover .plat-row-bg{opacity:1}
   .plat-row:hover .plat-name{color:#4AABB8;transition:color .25s}
@@ -534,16 +534,16 @@ nav.filled .nav-inner{height:64px}
 .plat-desc{font-size:16px;line-height:1.85;color:rgba(255,255,255,.36);margin-bottom:16px}
 .plat-inds{display:flex;flex-wrap:wrap;gap:7px}
 .plat-ind{font-size:11px;font-weight:500;padding:4px 12px;border-radius:100px;border:.5px solid rgba(255,255,255,.13);color:rgba(255,255,255,.32);letter-spacing:.06em}
-.plat-footer{padding:40px 0 0;display:flex;align-items:center;gap:40px}
+.plat-footer{padding:40px 0 52px;display:flex;align-items:center;gap:40px}
 .plat-footer-note{font-size:15px;color:rgba(255,255,255,.22);font-style:italic;max-width:560px;line-height:1.7}
 
 /* ═══════════════════════════════
    WHY
 ═══════════════════════════════ */
-.why{background:linear-gradient(160deg,#0A1828 0%,#0D2040 50%,#091422 100%);padding:100px 0;position:relative;overflow:hidden}
+.why{background:linear-gradient(160deg,#0A1828 0%,#0D2040 50%,#091422 100%);padding:72px 0;position:relative;overflow:hidden}
 .why::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(139,111,212,.06) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(74,171,184,.05) 0%,transparent 50%);pointer-events:none}
 .why-inner{max-width:1300px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
-.why-head{margin-bottom:72px}
+.why-head{margin-bottom:52px}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:.5px solid rgba(255,255,255,.07)}
 .why-item{padding:48px 44px 48px 0;border-bottom:.5px solid rgba(255,255,255,.06);transition:all .3s;cursor:default;position:relative}
 .why-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#8B6FD4,transparent);opacity:0;transition:opacity .3s}
@@ -562,7 +562,7 @@ nav.filled .nav-inner{height:64px}
 /* ═══════════════════════════════
    TESTIMONIALS
 ═══════════════════════════════ */
-.testi{background:var(--rich);padding:100px 0;position:relative;overflow:hidden}
+.testi{background:var(--rich);padding:72px 0;position:relative;overflow:hidden}
 .testi-bg-word{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-size:clamp(80px,12vw,180px);font-weight:300;letter-spacing:.12em;color:rgba(255,255,255,.03);white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
 .testi-deco-q{position:absolute;right:52px;top:-40px;font-family:var(--serif);font-size:300px;line-height:1;color:rgba(74,171,184,.05);pointer-events:none;font-weight:300}
 .testi-inner{max-width:1300px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
@@ -621,6 +621,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 ═══════════════════════════════ */
 .section-tag{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:16px}
 .section-h{font-family:var(--serif);font-size:clamp(44px,4.5vw,66px);font-weight:300;line-height:1.05;letter-spacing:-.02em}
+.plat-head .section-h{font-size:clamp(40px,4vw,60px);line-height:1.1}
 .section-h em{font-style:italic}
 .sh-dark{color:#fff}
 .sh-light{color:var(--navy)}
@@ -674,7 +675,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   /* ═══════════════════════════════
      INDUSTRY OUTCOMES SECTION
   ═══════════════════════════════ */
-  .outcomes{background:linear-gradient(to bottom,#fff 0%,#F5F8FF 100%);padding:100px 0;overflow:hidden}
+  .outcomes{background:linear-gradient(to bottom,#fff 0%,#F5F8FF 100%);padding:72px 0;overflow:hidden}
   .outcomes-inner{max-width:1300px;margin:0 auto;padding:0 52px}
   .outcomes-head{text-align:center;margin-bottom:64px}
   .outcomes-head h2{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:300;color:var(--navy);line-height:1.05;letter-spacing:-.02em}
@@ -696,11 +697,11 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   /* ═══════════════════════════════
      TABBED MODEL SECTION (replaces stacked steps)
   ═══════════════════════════════ */
-  .model-tabs-section{background:linear-gradient(135deg,#F0F5FF 0%,#E8F0FE 50%,#F5F8FF 100%);padding:100px 0;position:relative;overflow:hidden}
+  .model-tabs-section{background:linear-gradient(135deg,#F0F5FF 0%,#E8F0FE 50%,#F5F8FF 100%);padding:72px 0;position:relative;overflow:hidden}
   .model-tabs-section::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 80% 50%,rgba(74,171,184,.08) 0%,transparent 50%);pointer-events:none}
   .model-tabs-inner{max-width:1400px;margin:0 auto;padding:0 32px}
   .model-tabs-head{margin-bottom:60px}
-  .mtabs-layout{display:grid;grid-template-columns:260px 1fr 480px;gap:0;min-height:580px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 32px 100px rgba(13,31,53,.14)}
+  .mtabs-layout{display:grid;grid-template-columns:260px 1fr 480px;gap:0;min-height:580px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 32px 100px rgba(13,31,53,.14);max-width:100%}
   /* Left tab list */
   .mtabs-list{background:var(--navy);padding:48px 0;display:flex;flex-direction:column}
   .mtab{padding:22px 36px;cursor:pointer;position:relative;transition:background .2s;border-left:3px solid transparent}
@@ -722,8 +723,8 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   .mtab-panel-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
   .mtab-pill{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;border:.5px solid rgba(13,31,53,.14);color:var(--stone)}
   /* Right photo */
-  .mtabs-photo{position:relative;overflow:hidden;background:var(--deep)}
-  .mtabs-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:grayscale(10%);transition:transform 6s ease, opacity .3s ease}
+  .mtabs-photo{position:relative;overflow:hidden;background:var(--deep);min-height:420px}
+  .mtabs-photo img{width:100%;height:100%;max-width:100%;object-fit:contain;display:block;transition:transform 6s ease,opacity .3s ease}
   .mtabs-photo:hover img{transform:scale(1.04)}
   .mtabs-photo-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,.1) 0%,transparent 40%),linear-gradient(to top,rgba(13,31,53,.7) 0%,transparent 50%)}
   .mtabs-photo-caption{position:absolute;bottom:28px;left:28px;right:28px}
@@ -742,7 +743,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
     .mtabs-list{flex-direction:row;flex-wrap:wrap;padding:20px}
     .mtab{padding:14px 20px;border-left:none;border-bottom:3px solid transparent}
     .mtab.active{border-bottom-color:var(--accent)}
-    .mtabs-photo{min-height:300px}
+    .mtabs-photo{min-height:360px}
     .model-tabs-inner{padding-left:28px;padding-right:28px}
     .outcomes-inner{padding-left:28px;padding-right:28px}
   }
@@ -751,7 +752,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 /* ═══════════════════════════════
    EXECUTIVE SPEAKER
 ═══════════════════════════════ */
-.speaker{background:linear-gradient(160deg,#060E1C 0%,#0B1929 40%,#0D2040 100%);padding:120px 0;position:relative;overflow:hidden}
+.speaker{background:linear-gradient(160deg,#060E1C 0%,#0B1929 40%,#0D2040 100%);padding:80px 0;position:relative;overflow:hidden}
 .speaker::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 50%,rgba(139,111,212,.07) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 0% 80%,rgba(74,171,184,.05) 0%,transparent 50%);pointer-events:none}
 .speaker-inner{max-width:1300px;margin:0 auto;padding:0 52px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;position:relative;z-index:2}
 .speaker-eyebrow{font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(139,111,212,.8);display:block;margin-bottom:24px}
@@ -778,6 +779,35 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 .speaker-quote{margin-top:52px;padding:36px 40px;background:rgba(255,255,255,.03);border:.5px solid rgba(139,111,212,.2);border-left:3px solid #8B6FD4;border-radius:2px}
 .speaker-quote-text{font-family:var(--serif);font-size:20px;font-weight:300;font-style:italic;color:rgba(255,255,255,.65);line-height:1.5;margin-bottom:16px}
 .speaker-quote-attr{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(139,111,212,.6)}
+
+/* ═══════════════════════════════
+   WHERE AI MOVES THE NEEDLE
+═══════════════════════════════ */
+.needle{background:#060D18;padding:0;position:relative;overflow:hidden}
+.needle::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(139,111,212,.06) 0%,transparent 40%),linear-gradient(to bottom,#060D18 0%,#0A1525 100%);pointer-events:none}
+.needle-inner{max-width:1300px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
+.needle-head{padding:72px 0 60px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;border-bottom:.5px solid rgba(255,255,255,.06)}
+.needle-eyebrow{font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(139,111,212,.75);display:block;margin-bottom:0}
+.needle-h{font-family:var(--serif);font-size:clamp(48px,5.5vw,78px);font-weight:300;color:#fff;line-height:.95;letter-spacing:-.03em}
+.needle-h em{font-style:italic;color:rgba(255,255,255,.4)}
+.needle-sub{font-size:16px;line-height:1.8;color:rgba(255,255,255,.42);max-width:560px;text-align:center}
+.needle-rows{display:flex;flex-direction:column}
+.needle-row{display:grid;grid-template-columns:100px 1fr 1.8fr;gap:0;align-items:center;padding:0;border-bottom:.5px solid rgba(255,255,255,.05);min-height:100px;cursor:default;transition:background .25s}
+.needle-row:hover{background:rgba(255,255,255,.02)}
+.needle-row:hover .needle-row-num{color:rgba(139,111,212,.5)}
+.needle-row:hover .needle-row-title{color:#fff}
+.needle-row:hover .needle-row-bar{transform:scaleX(1)}
+.needle-row-num{font-family:var(--serif);font-size:clamp(52px,5vw,80px);font-weight:300;line-height:1;color:rgba(255,255,255,.05);padding:32px 0 32px max(52px,calc((100vw - 1300px)/2 + 52px));margin-left:calc(-1 * max(52px,calc((100vw - 1300px)/2 + 52px)));transition:color .3s;user-select:none;text-align:right;padding-right:40px}
+.needle-row-left{padding:32px 48px 32px 0;position:relative}
+.needle-row-bar{position:absolute;bottom:0;left:0;right:48px;height:1px;background:linear-gradient(to right,#8B6FD4,transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.needle-row-tag{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(139,111,212,.6);display:block;margin-bottom:8px}
+.needle-row-title{font-family:var(--serif);font-size:clamp(22px,2.2vw,30px);font-weight:300;color:rgba(255,255,255,.75);line-height:1.1;transition:color .3s}
+.needle-row-right{padding:32px 0;border-left:.5px solid rgba(255,255,255,.05);padding-left:52px}
+.needle-row-body{font-size:15px;line-height:1.8;color:rgba(255,255,255,.35);max-width:560px}
+.needle-footer{padding:52px 0;border-top:.5px solid rgba(255,255,255,.05);display:flex;align-items:center;justify-content:space-between;gap:40px}
+.needle-footer-note{font-size:14px;color:rgba(255,255,255,.22);font-style:italic}
+.needle-footer-cta{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:color .2s}
+.needle-footer-cta:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -989,7 +1019,7 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
       </div>
       <!-- Right: photo -->
       <div class="mtabs-photo">
-        <img id="mtab-img" style="transition:opacity .3s ease;" src="img_2.svg+xml" loading="lazy" alt="Steve Sellars — Founder, Selerna Group">
+        <img id="mtab-img" style="transition:opacity .3s ease;" src="" alt="" style="transition:opacity .3s ease;">
         <div class="mtabs-photo-overlay"></div>
         <div class="mtabs-photo-caption" style="display:none"></div>
       </div>
@@ -1188,6 +1218,99 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   </div>
 </section>
 
+
+<!-- WHERE AI MOVES THE NEEDLE -->
+<section class="needle">
+  <div class="needle-inner">
+    <div class="needle-head reveal">
+      <div>
+        <span class="needle-eyebrow">AI Impact Areas</span>
+        <h2 class="needle-h">Where AI moves<br><em>the needle.</em></h2>
+      </div>
+      <p class="needle-sub">AI's value isn't in the technology — it's in where it lands.<br>30+ years of pattern recognition means we know which problems compound.</p>
+    </div>
+    <div class="needle-rows">
+
+      <div class="needle-row reveal">
+        <div class="needle-row-num">01</div>
+        <div class="needle-row-left">
+          <div class="needle-row-bar"></div>
+          <span class="needle-row-tag">Operations</span>
+          <div class="needle-row-title">Operational Efficiency</div>
+        </div>
+        <div class="needle-row-right">
+          <p class="needle-row-body">Eliminate manual bottlenecks with AI workflows that run continuously — reducing cost, error, and the operational drag that quietly kills growth.</p>
+        </div>
+      </div>
+
+      <div class="needle-row reveal">
+        <div class="needle-row-num">02</div>
+        <div class="needle-row-left">
+          <div class="needle-row-bar"></div>
+          <span class="needle-row-tag">Revenue</span>
+          <div class="needle-row-title">Revenue Intelligence</div>
+        </div>
+        <div class="needle-row-right">
+          <p class="needle-row-body">AI-driven forecasting, pricing optimization, and opportunity identification — turning operational data into decisions that directly impact the top line.</p>
+        </div>
+      </div>
+
+      <div class="needle-row reveal">
+        <div class="needle-row-num">03</div>
+        <div class="needle-row-left">
+          <div class="needle-row-bar"></div>
+          <span class="needle-row-tag">Customer</span>
+          <div class="needle-row-title">Customer Experience</div>
+        </div>
+        <div class="needle-row-right">
+          <p class="needle-row-body">Intelligent support, personalization, and service automation that scales with demand — without scaling headcount proportionally.</p>
+        </div>
+      </div>
+
+      <div class="needle-row reveal">
+        <div class="needle-row-num">04</div>
+        <div class="needle-row-left">
+          <div class="needle-row-bar"></div>
+          <span class="needle-row-tag">Data</span>
+          <div class="needle-row-title">Data &amp; Decision Intelligence</div>
+        </div>
+        <div class="needle-row-right">
+          <p class="needle-row-body">Surface what matters from fragmented systems and siloed data. Faster decisions, fewer blind spots, and a leadership team that stops flying by gut.</p>
+        </div>
+      </div>
+
+      <div class="needle-row reveal">
+        <div class="needle-row-num">05</div>
+        <div class="needle-row-left">
+          <div class="needle-row-bar"></div>
+          <span class="needle-row-tag">Sales</span>
+          <div class="needle-row-title">Sales Acceleration</div>
+        </div>
+        <div class="needle-row-right">
+          <p class="needle-row-body">Smarter lead prioritization, pipeline intelligence, and automated follow-through — so your team closes more without the operational noise.</p>
+        </div>
+      </div>
+
+      <div class="needle-row reveal">
+        <div class="needle-row-num">06</div>
+        <div class="needle-row-left">
+          <div class="needle-row-bar"></div>
+          <span class="needle-row-tag">People</span>
+          <div class="needle-row-title">Workforce Enablement</div>
+        </div>
+        <div class="needle-row-right">
+          <p class="needle-row-body">Augment your teams with AI tools that make good people exponentially more effective — building capability, not dependency.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="needle-footer">
+      <span class="needle-footer-note">Every engagement begins by identifying which of these creates the highest-leverage return for your specific operation.</span>
+      <a href="https://calendar.selernagroup.com/" class="needle-footer-cta">Start with a Discovery Call →</a>
+    </div>
+  </div>
+</section>
+
 <!-- PLATFORMS -->
 <section class="platforms" id="platforms">
   <div class="plat-bg"></div>
@@ -1196,8 +1319,8 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
   <div class="plat-orb2"></div>
   <div class="plat-inner">
     <div class="plat-head reveal">
-      <div><span class="section-tag" style="color:rgba(74,171,184,.7)">Platform Studio</span><h2 class="section-h sh-dark">When consulting reveals<br>the pattern, we build<br><em>the platform.</em></h2></div>
-      <div><p class="plat-sub">Selerna is developing AI-powered operational platforms across multiple niche verticals — each designed to stand alone as a <strong>future spin-out, joint venture, or acquisition candidate.</strong></p><p class="plat-sub" style="margin-top:14px;font-size:14px;color:rgba(255,255,255,.2);font-style:italic">Platform partnerships and industry collaborations available.</p></div>
+      <div><span class="section-tag" style="color:rgba(74,171,184,.7)">Platform Studio</span><h2 class="section-h sh-dark">When consulting reveals the pattern,<br><em>we build the platform.</em></h2></div>
+      <div><p class="plat-sub">Selerna is developing AI-powered operational platforms across multiple niche verticals — each designed to stand alone as a <strong>future spin-out, joint venture, or acquisition candidate.</strong></p><p class="plat-sub" style="margin-top:14px;font-size:14px;color:rgba(255,255,255,.38);font-style:italic">Platform partnerships and industry collaborations available.</p></div>
     </div>
     <div class="plat-row reveal">
       <div class="plat-row-bg"></div>
