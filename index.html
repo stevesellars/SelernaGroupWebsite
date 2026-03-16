@@ -258,7 +258,7 @@ nav.filled .nav-inner{height:64px}
 .hero-sep{width:18px;height:1px;background:linear-gradient(to right,var(--accent),transparent)}
 
 .hero-h1{font-family:var(--serif);font-weight:300;font-size:clamp(68px,9vw,130px);line-height:.94;letter-spacing:-.025em;color:#fff;margin-bottom:0;animation:rUp 1s .45s var(--ease) both}
-.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
+.hero-h1 em{font-style:italic}.hero-h1 em .hw{background:linear-gradient(90deg,#4AABB8 0%,#8B6FD4 55%,#4AABB8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
 .hero-bottom{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:end;animation:rUp .9s .65s var(--ease) both;margin-bottom:0}
 .hero-sub{font-size:18px;line-height:1.65;color:rgba(255,255,255,.88);max-width:500px;font-weight:400}
@@ -1253,12 +1253,26 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
 @media(max-width:768px){.q-marquee-section{padding:32px 0 36px}.q-track-1{animation-duration:34s}.q-track-2{animation-duration:38s}.q-text{font-size:16px}}
 
 
-.hero-questions-anchor{flex-shrink:0;position:relative;z-index:2;padding:24px 0 28px;border-top:.5px solid rgba(255,255,255,.08)}
+.hero-questions-anchor{flex-shrink:0;position:relative;z-index:2;padding:20px 0 28px;border-top:2px solid rgba(139,111,212,.9)}
 .hero-questions-anchor .q-track-wrap::before{background:linear-gradient(to right,var(--deep),transparent)}
 .hero-questions-anchor .q-track-wrap::after{background:linear-gradient(to left,var(--deep),transparent)}
 .hero-tagline{font-family:var(--serif);font-size:clamp(18px,1.8vw,24px);font-weight:300;font-style:italic;color:rgba(255,255,255,.52);margin-top:24px;animation:rUp .9s .7s var(--ease) both;line-height:1.3}
 @media(max-width:768px){.hero-tagline{font-size:clamp(16px,4vw,20px);margin-top:16px}}
-</style>
+
+@media(max-width:768px){
+  /* ── Pills: center, column, hide separators ── */
+  .hero-pills{flex-direction:column;align-items:center;gap:8px;margin-bottom:28px}
+  .hero-sep{display:none}
+
+  /* ── Tagline: three lines, one phrase each ── */
+  .hero-tagline{font-size:15px;margin-top:12px;line-height:1.8;white-space:pre-line;max-width:100%}
+
+  /* ── Questions: more breathing room above ── */
+  .hero-questions-anchor{padding-top:40px;padding-bottom:24px}
+  div[style*="max-height:25vh"]{max-height:12vh !important}
+  div[style*="max-height:20vh"]{max-height:8vh !important}
+}
+@media(max-width:768px){.tagline-phrase{display:block}.tagline-sep{display:none}}.hero-q-label{display:block;text-align:center;font-size:10px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#8B6FD4;margin-bottom:16px}</style>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -1308,10 +1322,11 @@ footer{background:var(--deep);border-top:.5px solid var(--ghost);padding:80px 0 
       <span class="hero-pill">Niche Vertical Design &amp; Build</span>
     </div>
     <h1 class="hero-h1"><span class="hw hw1">Strategy.</span> <span class="hw hw2">Platforms.</span><br><em><span class="hw hw3">Actual</span> <span class="hw hw4">results.</span></em></h1>
-    <p class="hero-tagline">From curiosity to clarity. From blueprint to build. From system to scale.</p>
+    <p class="hero-tagline"><span class="tagline-phrase">From curiosity to clarity.</span><span class="tagline-sep"> </span><span class="tagline-phrase">From blueprint to build.</span><span class="tagline-sep"> </span><span class="tagline-phrase">From system to scale.</span></p>
   </div>
   <div style="flex:1;max-height:25vh"></div>
   <div class="hero-questions-anchor">
+    <span class="hero-q-label">Sound Familiar?</span>
     <div class="q-track-wrap">
       <div class="q-track q-track-1"><span class="q-item"><span class="q-text">Where do we even start with AI?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">We tried AI before — why would this be different?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What do we build vs. buy?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Is my idea actually viable or just interesting?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we get our team to actually adopt it?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we know if we're even ready?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Where do we even start with AI?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">We tried AI before — why would this be different?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What do we build vs. buy?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Is my idea actually viable or just interesting?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we get our team to actually adopt it?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we know if we're even ready?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Where do we even start with AI?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">We tried AI before — why would this be different?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What do we build vs. buy?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Is my idea actually viable or just interesting?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we get our team to actually adopt it?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we know if we're even ready?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Where do we even start with AI?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">We tried AI before — why would this be different?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What do we build vs. buy?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Is my idea actually viable or just interesting?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we get our team to actually adopt it?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we know if we're even ready?</span></span><span class="q-sep"></span></div>
       <div class="q-track q-track-2"><span class="q-item"><span class="q-text">I have an idea — what do I do first?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How long does this actually take?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What's the difference between a feature and a product?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we measure if it's working?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Do I need a technical co-founder or can I hire this?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do I know if there's a real market for this?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">I have an idea — what do I do first?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How long does this actually take?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What's the difference between a feature and a product?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we measure if it's working?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Do I need a technical co-founder or can I hire this?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do I know if there's a real market for this?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">I have an idea — what do I do first?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How long does this actually take?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What's the difference between a feature and a product?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we measure if it's working?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Do I need a technical co-founder or can I hire this?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do I know if there's a real market for this?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">I have an idea — what do I do first?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How long does this actually take?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">What's the difference between a feature and a product?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do we measure if it's working?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">Do I need a technical co-founder or can I hire this?</span></span><span class="q-sep"></span><span class="q-item"><span class="q-text">How do I know if there's a real market for this?</span></span><span class="q-sep"></span></div>
