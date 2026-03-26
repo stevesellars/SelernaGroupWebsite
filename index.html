@@ -486,7 +486,7 @@ nav.filled .nav-inner{height:64px}
 .svc-band-body{font-size:16px;line-height:1.65;color:rgba(255,255,255,.82);transition:color .3s;max-width:480px}
 .svc-band:hover .svc-band-body{color:rgba(255,255,255,.72)}
 /* Hover slide-in back panel */
-.svc-band-back{position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(135deg,#0E1E36 0%,#12284A 60%,#0D1E38 100%);transform:translateX(100%);transition:transform .5s cubic-bezier(.4,0,.2,1);z-index:4;padding:44px 52px;display:flex;flex-direction:column;justify-content:center;gap:14px;border-left:.5px solid rgba(139,111,212,.2)}
+.svc-band-back{position:absolute;top:0;right:0;width:50%;min-height:100%;background:linear-gradient(135deg,#0E1E36 0%,#12284A 60%,#0D1E38 100%);transform:translateX(100%);transition:transform .5s cubic-bezier(.4,0,.2,1);z-index:4;padding:32px 52px;display:flex;flex-direction:column;justify-content:flex-start;gap:14px;border-left:.5px solid rgba(139,111,212,.2);overflow-y:auto}
 .svc-band:hover .svc-band-back{transform:translateX(0)}
 .svc-band-back::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 0% 50%,rgba(139,111,212,.1) 0%,transparent 60%);pointer-events:none}
 .svc-band-back-tag{font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(139,111,212,.65);position:relative;z-index:1}
@@ -2612,6 +2612,23 @@ if(canvas) {
 })();
 </script>
 <script>
+// ── Desktop: Expand band height on hover to fit back panel ──
+(function() {
+  document.querySelectorAll('.svc-band').forEach(function(band) {
+    var back = band.querySelector('.svc-band-back');
+    if (!back) return;
+    band.addEventListener('mouseenter', function() {
+      if (window.innerWidth <= 768) return;
+      var backH = back.scrollHeight;
+      var bandH = band.offsetHeight;
+      if (backH > bandH) band.style.minHeight = backH + 'px';
+    });
+    band.addEventListener('mouseleave', function() {
+      band.style.minHeight = '';
+    });
+  });
+})();
+
 // ── Mobile: Service accordion ──
 (function() {
   function isMob() { return window.innerWidth <= 768; }
