@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Travel Kit | Selerna Group × CTO Webinar</title>
+<meta name="description" content="Request the presentation from the CTO Allied Member webinar, What Would You Hand to the Perfect Assistant?, and get your AI travel kit.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Same palette and type as selernagroup.com */
+:root{
+  --deep:#0B1929; --navy:#0F2035; --rich:#1E3F66; --accent:#4AABB8; --accent2:#3399AA;
+  --light:#F5F8FF; --light2:#EAF0FC; --slate:#3D5068; --stone:#6A7D94; --violet:#8B6FD4;
+  --serif:'Cormorant Garamond',Georgia,serif; --ui:'Syne',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--light);color:var(--navy);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* Header */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#0D2040 60%,var(--rich) 100%);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(139,111,212,.28),transparent 70%)}
+.hero .wrap{position:relative;z-index:1;padding-block:28px 72px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:64px}
+.top img{height:34px;width:auto;display:block}
+.top a.home{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);text-decoration:none}
+.top a.home:hover{color:#fff}
+.eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:-.02em;margin:0 0 22px;max-width:15ch;text-wrap:balance}
+h1 em{font-style:italic;color:#C9B8F2}
+.lead{font-size:17px;line-height:1.7;color:rgba(255,255,255,.82);max-width:58ch;margin:0}
+.rule{width:56px;height:1px;background:linear-gradient(to right,var(--accent),var(--violet));margin:30px 0}
+.speakers{display:flex;flex-wrap:wrap;gap:12px 36px;font-size:14px;color:rgba(255,255,255,.75)}
+.speakers b{color:#fff;font-weight:600}
+
+/* Form card */
+.main{margin-top:-40px;position:relative;z-index:2}
+.card{background:#fff;border-radius:6px;box-shadow:0 12px 48px rgba(13,31,53,.12);padding:44px 48px}
+.card h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,42px);line-height:1.05;margin:0 0 10px;letter-spacing:-.01em}
+.card .sub{color:var(--slate);margin:0 0 32px;max-width:62ch}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.field.full{grid-column:1/-1}
+label.l{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(13,31,53,.55)}
+label.l .opt{font-weight:500;letter-spacing:.06em;text-transform:none;color:var(--stone)}
+input[type=text],input[type=email],textarea{background:#fff;border:1px solid rgba(13,31,53,.16);border-radius:3px;padding:15px 18px;font:15px var(--ui);color:var(--navy);width:100%;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(74,171,184,.18)}
+textarea{min-height:110px;resize:vertical;line-height:1.6}
+fieldset{grid-column:1/-1;border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+legend{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(13,31,53,.55);margin-bottom:12px;padding:0}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--navy);cursor:pointer}
+.check input{margin:3px 0 0;width:18px;height:18px;accent-color:var(--accent2);flex:none}
+.consent{grid-column:1/-1;font-size:13px;color:var(--stone);line-height:1.6;margin:0}
+.actions{grid-column:1/-1;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:4px}
+button{font:700 12px var(--ui);letter-spacing:.16em;text-transform:uppercase;padding:18px 48px;border-radius:2px;border:0;background:var(--accent);color:#fff;cursor:pointer;box-shadow:0 6px 28px rgba(74,171,184,.3);transition:background .2s,transform .2s}
+button:hover{background:var(--accent2);transform:translateY(-1px)}
+button[disabled]{opacity:.6;cursor:wait;transform:none}
+.err{color:#B8432A;font-size:14px;margin:0}
+.done{display:none;text-align:center;padding:48px 32px;border-radius:6px;background:linear-gradient(135deg,var(--navy),#0D2040);color:#fff}
+.done.show{display:block}
+.done .icon{font-size:28px;color:var(--accent)}
+.done h2{color:#fff;margin:14px 0 8px}
+.done p{color:rgba(255,255,255,.75);margin:0 auto;max-width:48ch}
+
+/* Travel kit */
+.kit{padding-block:72px 40px}
+.kit .eyebrow{color:var(--violet)}
+.kit h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.4vw,52px);line-height:1.02;margin:0 0 12px;letter-spacing:-.02em}
+.kit .intro{color:var(--slate);max-width:60ch;margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.box{background:#fff;border-radius:6px;padding:28px 28px 30px;box-shadow:0 4px 20px rgba(13,31,53,.06);border-top:3px solid var(--accent);min-width:0}
+.box.v{border-top-color:var(--violet)}
+.box.n{border-top-color:var(--rich)}
+.box h3{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.1;margin:0 0 16px}
+.box ol,.box ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:12px;color:var(--slate);font-size:15px}
+.box li b{color:var(--navy);font-weight:600}
+
+footer{border-top:1px solid rgba(13,31,53,.08);margin-top:40px}
+footer .wrap{padding-block:28px 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--stone)}
+footer a{color:var(--stone)}
+
+@media (max-width:860px){
+  .grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .card{padding:32px 22px}
+  form{grid-template-columns:1fr}
+  .top{margin-bottom:44px}
+  .hero .wrap{padding-block:22px 64px}
+  button{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <a href="https://selernagroup.com/"><img src="../logo-white-transparent.png" alt="Selerna Group"></a>
+      <a class="home" href="https://selernagroup.com/">selernagroup.com</a>
+    </div>
+    <span class="eyebrow">CTO Allied Member Webinar · 18 November 2026</span>
+    <h1>What would you hand to the <em>perfect assistant?</em></h1>
+    <p class="lead">Thank you for joining us. Request the presentation below, and keep the travel kit for your first 90 days with AI.</p>
+    <div class="rule"></div>
+    <div class="speakers">
+      <span><b>Steve Sellars</b> · Founder &amp; CEO, Selerna Group · Co-founder, OriginsIQ</span>
+      <span><b>Shannon McKee</b> · Co-founder, OriginsIQ · Founder, Access Cruise</span>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <div class="wrap">
+    <div class="card" id="request">
+      <div id="form-wrap">
+        <h2>Request the presentation</h2>
+        <p class="sub">Tell us where to send it. We’ll email you a copy of the slides, and you can let us know if there’s an idea you’d like to talk through.</p>
+        <form id="cto-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="1f180a55-eeae-451a-93ac-018dfa541da3">
+          <input type="hidden" name="subject" value="CTO webinar: presentation request">
+          <input type="hidden" name="from_name" value="Selerna Group · CTO webinar page">
+          <input type="hidden" name="source" value="CTO Allied Member Webinar, 18 Nov 2026">
+          <input type="hidden" name="redirect" value="https://selernagroup.com/cto/?sent=1#request">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="field">
+            <label class="l" for="f-name">Your name</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="First and last name" required>
+          </div>
+          <div class="field">
+            <label class="l" for="f-email">Email address</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" placeholder="you@organization.com" required>
+          </div>
+          <div class="field">
+            <label class="l" for="f-org">Organization</label>
+            <input type="text" id="f-org" name="organization" autocomplete="organization" placeholder="Tourism board, hotel, operator…" required>
+          </div>
+          <div class="field">
+            <label class="l" for="f-role">Role <span class="opt">(optional)</span></label>
+            <input type="text" id="f-role" name="role" autocomplete="organization-title" placeholder="Your title">
+          </div>
+          <div class="field full">
+            <label class="l" for="f-country">Country or territory <span class="opt">(optional)</span></label>
+            <input type="text" id="f-country" name="country" autocomplete="country-name" placeholder="e.g. Barbados">
+          </div>
+
+          <fieldset>
+            <legend>What would you like?</legend>
+            <label class="check"><input type="checkbox" name="send_presentation" value="Yes" checked> Send me the presentation</label>
+            <label class="check"><input type="checkbox" name="talk_about_idea" value="Yes"> I’d like to talk through an AI idea or problem</label>
+            <label class="check"><input type="checkbox" name="future_sessions" value="Yes"> Let me know about future sessions</label>
+          </fieldset>
+
+          <div class="field full">
+            <label class="l" for="f-msg">What’s one task you would hand off first? <span class="opt">(optional)</span></label>
+            <textarea id="f-msg" name="message" placeholder="The report, the inbox, the partner reminders…"></textarea>
+          </div>
+
+          <p class="consent">We’ll use these details only to send the presentation and reply to what you ask for here. We don’t sell or share your information. To have your details removed at any time, email contact@selernagroup.com.</p>
+
+          <div class="actions">
+            <button type="submit" id="f-submit">Send my request</button>
+            <p class="err" id="f-err" role="alert" hidden></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="done" id="done" role="status">
+        <div class="icon">✦</div>
+        <h2>Request received.</h2>
+        <p>Thank you. We’ll email the presentation to you within one business day.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="kit" aria-labelledby="kit-h">
+  <div class="wrap">
+    <span class="eyebrow">Your travel kit</span>
+    <h2 id="kit-h">Keep these for the road.</h2>
+    <p class="intro">The three takeaways from today, in one place. Start small, keep a person in charge of what goes out, and grow from there.</p>
+    <div class="grid">
+      <div class="box">
+        <h3>Your 90-day itinerary</h3>
+        <ol>
+          <li><b>Week 1, unpack.</b> List where your team’s time goes. Would anyone notice if you stopped?</li>
+          <li><b>Week 2, leave it behind.</b> Make a “stop doing” list: one report, one meeting, one process.</li>
+          <li><b>Month 1, pilot one workflow.</b> Write the job description first. Then pick the tool.</li>
+          <li><b>Months 2–3, be the tour director.</b> Check every output, teach it, and protect the time you get back.</li>
+        </ol>
+      </div>
+      <div class="box v">
+        <h3>Set up your own assistant</h3>
+        <ol>
+          <li><b>Start a project</b> with your instructions and files.</li>
+          <li><b>Check the data settings</b> so your work doesn’t train the model.</li>
+          <li><b>Keep working in the project</b> so it builds on past conversations.</li>
+          <li><b>Connect email and calendar</b> so it can see your week.</li>
+          <li><b>Give an agent a goal,</b> the tools it needs, and clear limits.</li>
+          <li><b>Have it report back</b> for your approval. Nothing goes out without you.</li>
+        </ol>
+      </div>
+      <div class="box n">
+        <h3>Packing rules for your data</h3>
+        <ul>
+          <li><b>Don’t pack what you wouldn’t email to a stranger:</b> guest IDs, payments, private contracts.</li>
+          <li><b>Work data goes in work accounts,</b> where you control who sees it and how it’s used.</li>
+          <li><b>A person approves anything that leaves the building.</b></li>
+          <li><b>Scammers use AI too.</b> A request for money or a password? Confirm it another way.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Selerna Group · <a href="https://selernagroup.com/">selernagroup.com</a></span>
+    <span>Questions? <a href="mailto:contact@selernagroup.com">contact@selernagroup.com</a></span>
+  </div>
+</footer>
+
+<script>
+// Sends the form to Web3Forms (the same service as the site's contact form) and shows the
+// thank-you message in place. Without JavaScript, the form posts normally and redirects back here.
+(function(){
+  var form=document.getElementById('cto-form'), wrap=document.getElementById('form-wrap'),
+      done=document.getElementById('done'), btn=document.getElementById('f-submit'), err=document.getElementById('f-err');
+  function showDone(){ wrap.hidden=true; done.classList.add('show'); }
+  if (/[?&]sent=1/.test(location.search)) showDone();
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); err.hidden=true;
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    btn.disabled=true; btn.textContent='Sending…';
+    var data=new FormData(form);
+    data.delete('redirect');
+    fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+      .then(function(r){ return r.json().then(function(j){ return {ok:r.ok && j.success, j:j}; }); })
+      .then(function(res){
+        if (res.ok) { showDone(); }
+        else { throw new Error((res.j && res.j.message) || 'Something went wrong.'); }
+      })
+      .catch(function(){
+        btn.disabled=false; btn.textContent='Send my request';
+        err.textContent='Sorry, that didn’t go through. Please try again, or email contact@selernagroup.com.';
+        err.hidden=false;
+      });
+  });
+})();
+</script>
+</body>
+</html>
