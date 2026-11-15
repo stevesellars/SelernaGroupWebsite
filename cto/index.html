@@ -36,6 +36,17 @@ h1 em{font-style:italic;color:#C9B8F2}
 .rule{width:56px;height:1px;background:linear-gradient(to right,var(--accent),var(--violet));margin:30px 0}
 .speakers{display:flex;flex-wrap:wrap;gap:12px 36px;font-size:14px;color:rgba(255,255,255,.75)}
 .speakers b{color:#fff;font-weight:600}
+.speakers a.oiq{color:#fff;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px;text-decoration-thickness:2px}
+.speakers a.oiq:hover{color:var(--accent)}
+/* OriginsIQ band */
+.oiq-band{padding-block:8px 24px}
+.oiq-card{background:linear-gradient(135deg,var(--navy) 0%,#0D2040 60%,var(--rich) 100%);color:#fff;border-radius:6px;padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;box-shadow:0 12px 48px rgba(13,31,53,.14)}
+.oiq-card .txt{flex:1 1 420px;min-width:0}
+.oiq-card .eyebrow{margin-bottom:14px}
+.oiq-card h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.6vw,44px);line-height:1.05;margin:0 0 12px;letter-spacing:-.01em}
+.oiq-card p{color:rgba(255,255,255,.8);margin:0;max-width:60ch}
+.oiq-card a.go{flex:none;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:18px 36px;border-radius:2px;background:var(--accent);color:#fff;text-decoration:none;box-shadow:0 6px 28px rgba(74,171,184,.3);transition:background .2s}
+.oiq-card a.go:hover{background:var(--accent2)}
 
 /* Form card */
 .main{margin-top:-40px;position:relative;z-index:2}
@@ -108,8 +119,8 @@ footer a{color:var(--stone)}
     <p class="lead">Thank you for joining us. Request the presentation below, and keep the travel kit for your first 90 days with AI.</p>
     <div class="rule"></div>
     <div class="speakers">
-      <span><b>Steve Sellars</b> · Founder &amp; CEO, Selerna Group · Co-founder, OriginsIQ</span>
-      <span><b>Shannon McKee</b> · Co-founder, OriginsIQ · Founder, Access Cruise</span>
+      <span><b>Steve Sellars</b> · Founder &amp; CEO, Selerna Group · Co-founder, <a class="oiq" href="https://originsiq.com/" target="_blank" rel="noopener">OriginsIQ</a></span>
+      <span><b>Shannon McKee</b> · Co-founder, <a class="oiq" href="https://originsiq.com/" target="_blank" rel="noopener">OriginsIQ</a> · Founder, Access Cruise</span>
     </div>
   </div>
 </header>
@@ -218,9 +229,22 @@ footer a{color:var(--stone)}
   </div>
 </section>
 
+<section class="oiq-band" aria-labelledby="oiq-h">
+  <div class="wrap">
+    <div class="oiq-card">
+      <div class="txt">
+        <span class="eyebrow">From Steve &amp; Shannon · OriginsIQ</span>
+        <h2 id="oiq-h">Travel runs on intelligence. We build the layer underneath.</h2>
+        <p>AI-native platforms for cruise lines, resorts, tour operators and shore excursion companies. Home of ExcursionsIQ.</p>
+      </div>
+      <a class="go" href="https://originsiq.com/" target="_blank" rel="noopener">Visit originsiq.com →</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
-    <span>© 2026 Selerna Group · <a href="https://selernagroup.com/">selernagroup.com</a></span>
+    <span>© 2026 Selerna Group · <a href="https://selernagroup.com/">selernagroup.com</a> · <a href="https://originsiq.com/" target="_blank" rel="noopener">originsiq.com</a></span>
     <span>Questions? <a href="mailto:contact@selernagroup.com">contact@selernagroup.com</a></span>
   </div>
 </footer>
